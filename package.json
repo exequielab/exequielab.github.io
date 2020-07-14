@@ -1,11 +1,11 @@
 {
-    "_homepage": "https://jcc2303.github.io/time-life/",
-    "version": "0.0.1",
-    "scripts": {
+  "_homepage": "https://jcc2303.github.io/time-life/",
+  "version": "0.0.1",
+  "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "jest",
-    "predeploy": "npm run build",
+    "postbuild": "echo \"remove slash in index.html for css and js\" ",
     "deploy": "gh-pages -d build -r https://github.com/jcc2303/time-life.git -b master"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@snowpack/app-scripts-svelte": "^1.6.0-alpha.0",
+    "@snowpack/plugin-webpack": "^1.6.0-alpha.0",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/svelte": "^3.0.0",
     "autoprefixer": "^9.8.5",
