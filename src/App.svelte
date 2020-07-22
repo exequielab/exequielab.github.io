@@ -1,7 +1,21 @@
 <script>
 	import './main.css';	
-	  
-	const message = 'Learn Svelte';
+
+	let result = null
+	$: console.log(result);
+	
+	let locationHref = window.location.href
+
+	async function getData () {
+		const res = await fetch(`${locationHref}/data.json`, { method: 'GET' })
+		
+		const json = await res.json()
+		result = JSON.stringify(json)
+		
+	}
+
+	getData()
+
 
 </script>
 
