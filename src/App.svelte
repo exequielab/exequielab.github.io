@@ -1,25 +1,29 @@
 <script>
 	import './main.css';	
-
-	let result = null
-	$: console.log(result);
 	
+	import Services from './Services'
+
+	let data
+	let services
+
+	$: if(data) services = data.services
+		
 	let locationHref = window.location.href
 
-	async function getData () {
+	const getData = async () => {
 		const res = await fetch(`${locationHref}/data.json`, { method: 'GET' })
 		
 		const json = await res.json()
-		result = JSON.stringify(json)
-		
+		data = json // JSON.stringify(json)
 	}
 
 	getData()
-
 
 </script>
 
 
 <div class="bg-teal-200">
-	<p>Snowpack + Svelte + Tailwindcss</p>
+	{#if services}
+		<Services bind:services={services} ></Services>
+	{/if}
 </div>

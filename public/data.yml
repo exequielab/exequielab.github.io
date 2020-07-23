@@ -2,9 +2,18 @@
     # Collection Types #############################################################
     ################################################################################
     
-    # http://yaml.org/type/map.html -----------------------------------------------#
-    
-    map:
-      # Unordered set of key: value pairs.
-      KeyA: !!map
-        KeyX : valueY
+translate: !!map
+    services: servicios
+
+information: !!map
+    email: exequielantoniob@gmail.com
+
+services: !!seq
+    - Diagnostigo de automóviles 
+    - Detección de fallas DTC 
+    - Frenos y Suspencion 
+    - Cambio de aceite y filtro 
+    - Electricidad y Electronica media 
+    - Carrocería e Interiores 
+    - Cambio de correa de accesorios y de distribución 
+    - Mecánica media        
