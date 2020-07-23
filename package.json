@@ -1,5 +1,5 @@
 {
-  "_homepage": "https://jcc2303.github.io/time-life/",
+  "_homepage": "https://exequielab.github.io/",
   "version": "0.0.1",
   "scripts": {
     "data": "js-yaml public/data.yml > public/data.json",
@@ -8,7 +8,7 @@
     "serve": "sirv build --host 0.0.0.0",
     "test": "jest",
     "postbuild": "echo \"remove slash in index.html for css and js\" ",
-    "deploy": "gh-pages -d build -r https://github.com/jcc2303/time-life.git -b master"
+    "deploy": "gh-pages -d build -r https://github.com/exequielab/exequielab.github.io.git -b master"
   },
   "dependencies": {
     "svelte": "^3.21.0"
