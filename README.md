@@ -1,29 +1,50 @@
-# New Project
+# Svelte + TS + Vite
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+This template should help get you started developing with Svelte and TypeScript in Vite.
 
-## Available Scripts
+## requirements
+eslint
 
-### npm start
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+## develop
 
-### npm test
+### security
 
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+check 
+```bash
+https://github.com/<repository>/security/dependabot
+```
 
-### npm run build
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" or "@snowpack/plugin-parcel" to your `snowpack.config.json` config file.
+## preview
 
-### Q: What about Eject?
+build & preview
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+```sh
+yarn build
+yarn preview
+```
+
+
+
+### docker - develop 
+
+```sh
+docker build -t exequielab .
+docker run -p 5000:3000 exequielab   
+# -> CMD ->  npm run start ->  node server -> localhost:3000
+```
+
+### deploy
+
+#### deploy github
+
+```sh
+git commit -a --amend -m "[reason]: message" && git push -f
+```
+
+- github config env
+- Environments / Configure develop-deploy / protection rules / Deployment branches
+- github notification

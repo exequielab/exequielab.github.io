@@ -7,7 +7,6 @@
     let _sended
     
     const glink = 'https://docs.google.com/forms/d/e/1FAIpQLSe4vbWqqtCphDDUk2l0YCTMCenKctZXF0jeAexzxM27gZCB1Q/formResponse?usp=pp_url'
-    // & entry.839337160=cabrera.javier@gmail.com & entry.1166974658=634550886
 
     const send = (e) => {
         if(!email) return

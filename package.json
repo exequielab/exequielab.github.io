@@ -1,31 +1,45 @@
 {
-  "_homepage": "https://exequielab.github.io/",
-  "version": "0.0.1",
+  "name": "vite-svelte-tailwindcss",
+  "version": "0.0.0",
   "scripts": {
     "data": "js-yaml public/data.yml > public/data.json",
-    "start": "snowpack dev",
-    "build": "snowpack build",
-    "serve": "sirv build --host 0.0.0.0",
-    "test": "jest",
-    "postbuild": "echo \"remove slash in index.html for css and js\" ",
+    "dev": "vite",
+    "prebuild": "npm run data",
+    "build": "vite build",
+    "postbuild": "echo \"remove slash in index.html for css and js\"",
+    "serve": "vite preview",
+    "fix": "eslint --fix \"{,!(node_modules|public|docs|build|dist)/**/}*.{js,svelte}\"",
+    "format": "prettier --write \"{,!(node_modules|public|docs|build|dist)/**/}*.{js,svelte}\"",
+    "prepare": "husky install",
     "deploy": "gh-pages -d build -r https://github.com/exequielab/exequielab.github.io.git -b master"
   },
-  "dependencies": {
-    "svelte": "^3.21.0"
-  },
   "devDependencies": {
-    "@snowpack/app-scripts-svelte": "^1.6.0-alpha.0",
-    "@snowpack/plugin-webpack": "^1.6.0-alpha.0",
-    "@testing-library/jest-dom": "^5.5.0",
-    "@testing-library/svelte": "^3.0.0",
-    "autoprefixer": "^9.8.5",
-    "cssnano": "^4.1.10",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "autoprefixer": "^10.3.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-svelte3": "^3.1.2",
     "gh-pages": "^3.1.0",
-    "jest": "^25.4.0",
+    "husky": "^5.2.0",
     "js-yaml": "^3.14.0",
-    "postcss-cli": "^7.1.1",
-    "sirv-cli": "^1.0.3",
-    "snowpack": "^2.6.4",
-    "tailwindcss": "^1.4.6"
+    "postcss": "^8.3.6",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "tailwindcss": "^3.0.23",
+    "vite": "^2.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "npm run fix && npm run format"
   }
 }

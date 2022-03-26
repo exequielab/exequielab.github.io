@@ -1,32 +1,30 @@
-<script>
-	import './main.css';	
+<script lang="ts">
+	import { onMount } from 'svelte';
+
+	import {data} from './store.js'
+
+  import Home from './components/Home.svelte';
+
+
 	
-	import Services from './Services'
-	import Email from './Email'
-
-	let data
-	let services
-
-	$: if(data) services = data.services
-		
-	let locationHref = window.location.href
-
 	const getData = async () => {
-		const res = await fetch(`${locationHref}data.json`, { method: 'GET' })
-		
+		// window.location.href
+		const res = await fetch(`${window.location.origin}/data.json`, { method: 'GET' })		
 		const json = await res.json()
-		data = json // JSON.stringify(json)
+		console.log(json);
+		
+		return json
 	}
 
-	getData()
+	onMount(async () => {
+		let datax = await getData()		
+		data.set(datax);
+	});
 
 </script>
 
-
-<div class="bg-teal-200">
-	{#if services}
-		<Services bind:services={services} ></Services>
-	{/if}
-
-	<Email></Email>
-</div>
+<main>
+  <div class="text-align-center antialiased text-gray-900">
+    <Home />
+  </div>
+</main>

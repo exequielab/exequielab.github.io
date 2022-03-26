@@ -1,8 +1,16 @@
+// tailwind.config.js
 module.exports = {
-  purge: ['./src/**/*.svelte', './public/*.html'],
+  content: [
+    // Example content paths...
+    './index.html',
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx,svelte}',
+  ],
   theme: {
     extend: {},
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [],
 }
