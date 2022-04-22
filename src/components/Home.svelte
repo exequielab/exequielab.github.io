@@ -35,8 +35,6 @@
 	{#if services}
 		<Services bind:services={services} ></Services>
 	{/if}
-
-	
 </div>
 
 <div class="bg-gray-300 flex">
@@ -47,15 +45,13 @@
 </div>	
 
 
-<div class="bg-teal-200">
+<div class="bg-teal-200 text-xl">
 	{#if studies}
 		<Studies bind:studies={studies} ></Studies>
 	{/if}
 
 
 </div>
-
-
 
 
 
