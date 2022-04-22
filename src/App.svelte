@@ -5,20 +5,23 @@
 
   import Home from './components/Home.svelte';
 
-
+  import datax from './data'
 	
 	const getData = async () => {
 		// window.location.href
-		const res = await fetch(`${window.location.origin}/data.json`, { method: 'GET' })		
+		const res = await fetch(`${window.location.origin}/data.json`, { method: 'GET' })	
+		console.log('res',res)
+
 		const json = await res.json()
-		console.log(json);
+		console.log('json',json);
 		
 		return json
 	}
 
 	onMount(async () => {
-		let datax = await getData()		
-		data.set(datax);
+	//	let datax = await getData()		
+		data.set(datax); 
+		
 	});
 
 </script>
