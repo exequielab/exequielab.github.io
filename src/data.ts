@@ -19,10 +19,11 @@ export default {
         "Experiencia en Grupo PSA,Grupo VAG,MITSUBISHI MOTORS",
         "Pasante de practicas en taller 'BLANCO MALBORO"
     ],
-     "otherworks":[
+     "technologies":[
 
-     "Detectar fallos electricos",
-     "Detectar fallos en controladores y reguladores",
-     "Instalacion de  audio y pantallas"
+     "Java Script",
+     "Type Script",
+     "Tailwind css",
+     "Svelte"
 ]
 }
