@@ -1,5 +1,5 @@
 <script>
-	export let technologies = []
+	export let technologies= []
 
 	$: console.log(technologies);
 	
@@ -17,7 +17,7 @@
 		{#each technologies as technology}
 		<div class=" flex flex-col flex-grow flex-shrink p-2 rounded-t rounded-b-none overflow-hidden shadow">
 			<div class="flex-1 bg-white">
-				<p class="w-full font-semibold text-lg text-gray-800 px-6" >{technologies}</p>
+				<p class="w-full font-semibold text-lg text-gray-800 px-6" >{technology}</p>
 				<!-- <div class="flex items-center justify-center">
 					<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-2 px-4 shadow-lg">More...</button>
 				</div> -->

@@ -1,0 +1,75 @@
+{
+	"workbench.colorCustomizations": {
+		"activityBar.activeBackground": "#3399ff",
+		"activityBar.activeBorder": "#bf0060",
+		"activityBar.background": "#3399ff",
+		"activityBar.foreground": "#15202b",
+		"activityBar.inactiveForeground": "#15202b99",
+		"activityBarBadge.background": "#bf0060",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"sash.hoverBorder": "#3399ff",
+		"statusBar.background": "#007fff",
+		"statusBar.foreground": "#e7e7e7",
+		"statusBarItem.hoverBackground": "#3399ff",
+		"statusBarItem.remoteBackground": "#007fff",
+		"statusBarItem.remoteForeground": "#e7e7e7",
+		"titleBar.activeBackground": "#007fff",
+		"titleBar.activeForeground": "#e7e7e7",
+		"titleBar.inactiveBackground": "#007fff99",
+		"titleBar.inactiveForeground": "#e7e7e799"
+	},
+	"peacock.color": "#007fff",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.detectIndentation": false
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.exclude": {
+		"**/.git": true,
+		"**/node_modules": true,
+		"**/build": true,
+		"**/dist": true,
+		"**/coverage": true,
+		"**/storybook-static": true
+		// "**/docs": true
+	},
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		// "source.fixAll.eslint": false
+		"source.organizeImports": true,
+		"source.fixAll.prettier": true
+	},
+	"editor.rulers": [85],
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"eslint.codeAction.showDocumentation": {
+		"enable": true
+	},
+	"eslint.quiet": true,
+	"eslint.format.enable": true,
+	"eslint.alwaysShowStatus": true,
+	"eslint.lintTask.enable": true,
+	"eslint.packageManager": "yarn", // change to npm if you use npm
+	"css.validate": false,
+	"jest.enableInlineErrorMessages": true,
+	"jest.showCoverageOnLoad": true,
+	"jest.runAllTestsFirst": false,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true
+}

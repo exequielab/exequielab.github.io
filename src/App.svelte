@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Home from './components/Home.svelte';
+	import datax from './data';
+	import { data } from './store.js';
+	import { createScene } from "./scene";
 
-	import {data} from './store.js'
+	let el;
 
-  import Home from './components/Home.svelte';
-
-  import datax from './data'
-	
 	const getData = async () => {
 		// window.location.href
-		const res = await fetch(`${window.location.origin}/data.json`, { method: 'GET' })	
+		const promisedData = fetch(`${window.location.origin}/data.json`, { method: 'GET' })	
+		const res = await promisedData
 		console.log('res',res)
 
 		const json = await res.json()
@@ -17,17 +18,32 @@
 		
 		return json
 	}
-
 	onMount(async () => {
-	//	let datax = await getData()		
+		//	let datax = await getData()		
 		data.set(datax); 
+		createScene(el)
 		
 	});
 
+
 </script>
+
+<canvas bind:this={el}></canvas>
 
 <main>
   <div class="text-align-center antialiased text-gray-900">
     <Home />
   </div>
 </main>
+
+
+
+
+
+
+	
+	
+  
+
+  
+  
