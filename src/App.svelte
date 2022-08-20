@@ -3,35 +3,46 @@
 	import Home from './components/Home.svelte';
 	import datax from './data';
 	import { data } from './store.js';
-	import { createScene } from "./scene";
 
-	let el;
+	import Car from './car/Car.svelte'
 
-	const getData = async () => {
-		// window.location.href
-		const promisedData = fetch(`${window.location.origin}/data.json`, { method: 'GET' })	
-		const res = await promisedData
-		console.log('res',res)
+	import Box from './cube/Box.svelte'
+	import City from './cube/City.svelte'
+	
 
-		const json = await res.json()
-		console.log('json',json);
-		
-		return json
-	}
 	onMount(async () => {
 		//	let datax = await getData()		
 		data.set(datax); 
-		createScene(el)
 		
 	});
 
 
 </script>
 
-<canvas bind:this={el}></canvas>
+ 
+
+	 
+	 
+	 
+
+
+<div class="bg-scroll ..." style="background-image: url(istockphoto-652997680-612x612.jpg)">
+	<img class=" absolute w-full h-screen  bg-scroll border-x-8  " src="docs/istockphoto-652997680-612x612.jpg" alt="holas" >
+	
+	
+	
+	<div  class=" h-screen m-0  flex items-center justify-center " >
+		<div class="relative w-3/4 h-screen m-0">
+			<City />
+			
+		</div>
+		
+	</div>
+	
+</div>
 
 <main>
-  <div class="text-align-center antialiased text-gray-900">
+  <div class="text-align-center antialiased text-white">
     <Home />
   </div>
 </main>
