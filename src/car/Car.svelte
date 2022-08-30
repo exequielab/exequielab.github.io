@@ -1,25 +1,17 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { createScene } from "./scene";
+	import { onDestroy, onMount } from 'svelte';
+	import { createScene } from './scene';
 
 	let el;
 
 	onMount(async () => {
-		createScene(el)		
+		createScene(el);
 	});
 
-
+	onDestroy(async () => {
+		console.log('onDestroy');
+		// destroyScene(el)
+	});
 </script>
 
-<canvas bind:this={el}></canvas>
-
-
-
-
-
-	
-	
-  
-
-  
-  
+<canvas bind:this={el} />

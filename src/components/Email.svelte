@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 
     let email // = 'cabrerajavier@gmail.com'
     let phone // = '634550886'
@@ -29,10 +29,10 @@
 </script>
 
 
-<form action={glink} target="hidden_iframe" on:submit={send} >
+<!-- <form action={glink} target="hidden_iframe" on:submit={send} >
   <input type="submit" value="Submit" >
 </form> -->
-<!-- {#if !_sended}
+{#if !_sended}
 <p class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Dejame tu contacto</p>
 <div class="flex flex-wrap mb-6 px-3">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -52,4 +52,4 @@
 {/if}
 
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="hiddenForm" ></iframe> --> -->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="hiddenForm" ></iframe>

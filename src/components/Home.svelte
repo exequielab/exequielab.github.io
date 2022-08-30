@@ -46,15 +46,17 @@
 	let promised = intermediary();
 </script>
 
-<main>
+<!-- <main>
 	{#await promised then number}
 		<div class=" bg-white flex justify-center my-5">
-			<!-- <img class="object-contain w-60 rounded-full border-x-8 border-blue-900 shadow-2xl " src="/public/1651170223948.jpg" alt="holas" > -->
+			<img class="object-contain w-60 rounded-full border-x-8 border-blue-900 shadow-2xl " src="/public/1651170223948.jpg" alt="holas" >
 		</div>
 	{:catch error}
 		<p style="color: red">{error.message}</p>
 	{/await}
-</main>
+</main> -->
+
+<div class="text-black text-xl  " />
 
 <div
 	class="bg-blue-800 text-4xl rounded-full mr-96 ml-96 p-3 flex justify-center  border-4 border-gray-600"
