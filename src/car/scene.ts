@@ -76,7 +76,7 @@ function animate() {
 
 const resize = () => {
 	console.log('resize');
-	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setSize(window.innerWidth / 3, window.innerHeight / 3);
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
 };
