@@ -1,17 +1,18 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Car from './car/Car.svelte';
-	import Email from './components/Email.svelte';
+	import Footer from './components/Footer.svelte';
+	import Header from './components/Header.svelte';
 	import Hobbies from './components/Hobbies.svelte';
 	import StudiesMechanics from './components/StudiesMechanics.svelte';
-	import Technologies from './components/technologies.svelte';
+	import Technologies from './components/Technologies.svelte';
 	import datax from './data';
 	import { cameraPosition, data } from './store';
+
 	let grados = 0;
 	let hobbies = [];
 	let studiesmechanics = [];
 	let technologies = [];
-
 	$: console.log('grados', grados);
 	let filteredStudiesmechanics = [];
 	$: if (studiesmechanics) filteredStudiesmechanics = studiesmechanics;
@@ -22,7 +23,6 @@
 
 	cameraPosition.subscribe((p) => {
 		console.log(p);
-
 		grados = calcularAngulo(0, 0, p[0], p[2]);
 	});
 
@@ -37,49 +37,47 @@
 		return g;
 	}
 
-	// console.log(calcularAngulo(0, 0, 12, 0));
-	// console.log(calcularAngulo(0, 0, 0, 10));
-	// console.log(calcularAngulo(0, 0, -12, 0));
-	// console.log(calcularAngulo(0, 0, 0, -10));
-
 	onMount(async () => {
 		//	let datax = await getData()
 		data.set(datax);
 	});
 </script>
 
-<div class="flex items-center justify-center ">
-	<div class="flex items-center justify-center w-full">
-		<div class="relative w-screen h-1/3 grow">
-			<Car />
-		</div>
+<div class="flex items-center justify-center w-full relative">
+	<div class="absolute w-screen h-1/3 grow">
+		<Car />
+	</div>
+
+	<div class=" absolute w-screen h-1/3 grow mt-14">
+		<Header />
 	</div>
 </div>
 
-<div class="text-blue-600">
-	{#if 1 < grados && grados < 89}
-		{#if filteredStudiesmechanics}
-			<StudiesMechanics bind:studiesmechanics={filteredStudiesmechanics} />
+<div class="relative  top-96 mt-24">
+	<div class="  bg-black">
+		{#if 0 < grados && grados < 120}
+			{#if filteredStudiesmechanics}
+				<StudiesMechanics bind:studiesmechanics={filteredStudiesmechanics} />
+			{/if}
 		{/if}
-	{/if}
-</div>
 
-<div>
-	{#if 90 < grados && grados < 179}
-		<Email />
-	{/if}
-
-	{#if 180 < grados && grados < 269}
-		{#if filteredTechnologies}
-			<Technologies bind:technologies={filteredTechnologies} />
+		{#if 121 < grados && grados < 240}
+			{#if filteredTechnologies}
+				<Technologies bind:technologies={filteredTechnologies} />
+			{/if}
 		{/if}
-	{/if}
 
-	{#if 270 < grados && grados < 359}
-		{#if filteredHobbies}
-			<Hobbies bind:hobbies={filteredHobbies} />
+		{#if 241 < grados && grados < 360}
+			{#if filteredHobbies}
+				<Hobbies bind:hobbies={filteredHobbies} />
+			{/if}
 		{/if}
-	{:else}
-		<h1>nada</h1>
-	{/if}
+	</div>
+
+	<footer
+		class=" fixed bottom-0 left-0 z-20  w-full   shadow  md:justify-between  dark:bg-gray-800 dark:border-gray-600"
+	>
+		<Footer />
+		<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400" />
+	</footer>
 </div>

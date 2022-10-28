@@ -36,7 +36,7 @@ function init(el) {
 	controls = new OrbitControls(camera, renderer.domElement);
 	controls.enableZoom = false;
 	// controls.autoRotateSpeed = 1.5;
-	// controls.autoRotate = true;
+	controls.autoRotate = true;
 	controls.rotateSpeed = 0.5;
 	// controls.addEventListener('change', orbitChange);
 
@@ -54,7 +54,7 @@ function init(el) {
 
 	loader.load('scene.gltf', function (gltf) {
 		let car = gltf.scene.children[0];
-		car.scale.set(0.5, 0.5, 0.5);
+		car.scale.set(0.2, 0.2, 0.2);
 		scene.add(gltf.scene);
 	});
 	animate();
@@ -76,7 +76,7 @@ function animate() {
 
 const resize = () => {
 	console.log('resize');
-	renderer.setSize(window.innerWidth / 3, window.innerHeight / 3);
+	renderer.setSize(window.innerWidth, window.innerHeight);
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
 };

@@ -1,9 +1,8 @@
 <script>
 	import { data } from '../store.js';
-	import Email from './Email.svelte';
 	import Hobbies from './Hobbies.svelte';
 	import StudiesMechanics from './StudiesMechanics.svelte';
-	import Technologies from './technologies.svelte';
+	import Technologies from './Technologies.svelte';
 
 	let searchTerm = '';
 	let show = false;
@@ -87,6 +86,7 @@
 		Conocimientos
 	</button>
 </div>
+
 <div class="bg-blue-500 ">
 	{#if show}
 		<!-- todo lo que este aqui se esconde -->
