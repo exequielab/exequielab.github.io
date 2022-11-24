@@ -1,6 +1,6 @@
-<div class=" grid justify-center px-6   ">
+<div class=" grid justify-center px-6  ">
 	<div
-		class=" tracking-wide grid justify-center text-gray-400 text-xl font-bold mb-2"
+		class=" tracking-wide grid justify-center text-gray-400 text-xl font-bold mb-1"
 	>
 		Contact:
 	</div>
@@ -11,20 +11,12 @@
 		ExequielAntonioB@gmail.com
 	</div>
 </div>
-<!-- <div class="grid justify-center px-6 ">
-	<div class=" tracking-wide text-gray-400 text-xl font-bold mb-2">
-		Phone Number:
-	</div>
 
-	<div class="tracking-wide text-orange-600 text-xl font-bold mb-6 px-3">
-		644104204
-	</div>
-</div> -->
-<div class="grid justify-center">
-	<div class="  py-0  ">
+<div class="grid justify-center  ">
+	<div class="  py-0 ">
 		<a href="https://www.linkedin.com/in/exequiel-bartolomeu-54b7a51b7/">
 			<button
-				class=" hover:bg-gray-600 duration-300 bg-black mb-3  text-xl  font-semibold text-orange-600 "
+				class=" hover:bg-gray-600 duration-300 bg-black mb-2  text-xl  font-semibold text-orange-600 "
 				>Linkedin
 			</button>
 		</a>

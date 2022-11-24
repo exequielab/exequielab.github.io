@@ -5,7 +5,7 @@
 </script>
 
 <section class="bg-black  ">
-	<div class="container mx-auto flex flex-wrap  pb-12">
+	<div class="container mx-auto flex flex-wrap  ">
 		<h1
 			class="w-full my-2 text-5xl font-bold leading-tight text-center text-orange-600"
 		>

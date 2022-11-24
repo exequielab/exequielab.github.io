@@ -9,6 +9,7 @@ export default {
 		'Car Mechanic',
 		'Performance Mechanic',
 		'Fan Of The Motor World And Drift Racing',
+		'Fan of Tech World',
 	],
 	studiesmechanics: [
 		'ATEMA 2018-2019',
@@ -25,5 +26,6 @@ export default {
 		'Svelte',
 		'E2E Testing',
 		'Cypress',
+		'Playwright',
 	],
 };

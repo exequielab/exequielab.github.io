@@ -3,14 +3,14 @@
 </script>
 
 <section class="bg-black   ">
-	<div class="container mx-auto flex flex-wrap  pb-12 ">
+	<div class="container mx-auto flex flex-wrap  ">
 		<h1
-			class="w-full my-2 text-5xl font-bold leading-tight text-center text-orange-600"
+			class="w-full my-1 text-5xl font-bold leading-tight text-center text-orange-600"
 		>
 			Hobbies
 		</h1>
 
-		<div class="w-full mb-4 ">
+		<div class="w-full mb-3 ">
 			<div class="h-1 mx-auto gradient  w-64 opacity-25 my-0 py-0 rounded-t" />
 		</div>
 
